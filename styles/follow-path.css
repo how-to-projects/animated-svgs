@@ -20,15 +20,7 @@ body {
 }
 
 .path-container {
-  width: 500px;
-  height: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #030303;
+  width: 1000px;
 }
 
 .ball {
@@ -36,14 +28,15 @@ body {
   height: 10px;
   background-color: red;
   border-radius: 50%;
-  offset-path: path("M0,0 L500, 0");
-  -webkit-animation: red-ball 2s linear alternate infinite;
-          animation: red-ball 2s linear alternate infinite;
+  offset-path: path("M10 80 Q 77.5 10, 145 80 T 1000 100");
+  offset-distance: 0%;
+  -webkit-animation: red-ball 5s linear alternate infinite;
+          animation: red-ball 5s linear alternate infinite;
 }
 
 @-webkit-keyframes red-ball {
   from {
-    offset-distance: 0%;
+    offset-distance: %;
   }
   to {
     offset-distance: 100%;
@@ -52,7 +45,7 @@ body {
 
 @keyframes red-ball {
   from {
-    offset-distance: 0%;
+    offset-distance: %;
   }
   to {
     offset-distance: 100%;

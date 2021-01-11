@@ -1,7 +1,22 @@
-.dark-gradient, .box {
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Lobster&family=Lobster+Two&display=swap");
+.heebo {
+  font-family: 'Heebo', sans-serif;
+}
+
+.lobster {
+  font-family: 'lobster', cursive;
+}
+
+.dark-gradient {
   background: #222222;
   background: linear-gradient(340deg, #222222 0%, black 65%);
   background: -webkit-linear-gradient(340deg, #222222 0%, black 65%);
+}
+
+.light-gradient {
+  background: #f6f6f6;
+  background: linear-gradient(340deg, rgba(246, 246, 246, 0.5) 0%, rgba(246, 246, 246, 0.25) 65%);
+  background: -webkit-linear-gradient(340deg, rgba(246, 246, 246, 0.5) 0%, rgba(246, 246, 246, 0.25) 65%);
 }
 
 * {
@@ -22,47 +37,35 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #333;
   overflow: hidden;
-}
-
-.ocean {
-  height: 5%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #015871;
+  background: radial-gradient(ellipse at center, #2C5364, #203A43 35%, #0F2027 100%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .wave {
-  background: url(../images/svgs/wave.svg) repeat-x;
+  background: url("../images/svgs/wave.svg") repeat-x;
   position: absolute;
-  top: 200px;
-  width: 6440px;
+  opacity: 1;
+  top: 225px;
+  width: 2300px;
   height: 404px;
   -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
           animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 
-.isometric {
-  -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
-          transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+.thinky {
+  background: url(../images/svgs/thinky.svg);
+  width: 150px;
+  height: 150px;
+  -webkit-animation: swell 7s infinite;
+          animation: swell 7s infinite;
 }
 
 .box {
+  position: relative;
   width: 400px;
   height: 540px;
-  border: 10px solid #ccc;
-  line-height: 200px;
-  text-align: center;
-  color: #ddd;
-  font-size: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
-  position: relative;
+  border: 10px solid rgba(251, 251, 251, 0.35);
   overflow: hidden;
   -webkit-box-shadow: 30px 25px 10px #222222;
           box-shadow: 30px 25px 10px #222222;
@@ -108,8 +111,16 @@ body {
   }
 }
 
-.ball-path {
-  position: absolute;
-  top: 50px;
+.el {
+  width: 400px;
+  height: 540px;
+  -webkit-mask-image: url(../images/svgs/thinky.svg);
+          mask-image: url(../images/svgs/thinky.svg);
+  -webkit-mask-size: 150px;
+          mask-size: 150px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
 }
 /*# sourceMappingURL=wave.css.map */

@@ -12,12 +12,15 @@ body {
     background-color: #333;
 }
 
+svg {
+    // width: 1000px;
+    // display: block;
+  }
+
 .path-container {
-    width: 500px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba($color: #030303, $alpha: 1.0);
+    width: 1000px;
+    // align-items: center;
+    // justify-content: center;
 }
 
 .ball {
@@ -26,15 +29,15 @@ body {
     background-color: red;
     border-radius: 50%;
     
-    offset-path: path('M0,0 L500, 0');
-    // offset-distance: 0%;
+    offset-path: path('M10 80 Q 77.5 10, 145 80 T 1000 100');
+    offset-distance: 0%;
   
-    animation: red-ball 2s linear alternate infinite;
+    animation: red-ball 5s linear alternate infinite;
   }
   
   @keyframes red-ball {
     from {
-      offset-distance: 0%;
+      offset-distance: %;
     }
     to {
       offset-distance: 100%;
