@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+
+.path-container {
+    width: 500px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #030303, $alpha: 1.0);
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    
+    offset-path: path('M0,0 L500, 0');
+    // offset-distance: 0%;
+  
+    animation: red-ball 2s linear alternate infinite;
+  }
+  
+  @keyframes red-ball {
+    from {
+      offset-distance: 0%;
+    }
+    to {
+      offset-distance: 100%;
+    }
+  }

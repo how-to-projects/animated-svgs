@@ -32,7 +32,6 @@ body {
 .wave {
   background: url(../images/svgs/wave.svg) repeat-x;
   position: absolute;
-  // top: -198px;
   top: 200px;
   width: 6440px;
   height: 404px;
@@ -41,23 +40,17 @@ body {
 }
 
 .isometric {
-    width: 200px;
-    height: 160px;
-    margin: 100px auto 0 auto;
+    // width: 400px;
+    // height: 3200px;
+    // margin: 100px auto 0 auto;
     transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
-}
-
-.wave:nth-of-type(2) {
-  top: -175px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
 }
 
 .box {
     width: 400px;
     height: 540px;
     border: 10px solid #ccc;
-    border-radius: 10px;
+    // border-radius: 10px;
     line-height: 200px;
     text-align: center;
     color: #ddd;
@@ -87,3 +80,9 @@ body {
     transform: translate3d(0,5px,0);
   }
 }
+
+.ball-path {
+  position:absolute;
+  top: 50px;
+}
+
