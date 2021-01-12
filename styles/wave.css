@@ -7,10 +7,8 @@
   font-family: 'lobster', cursive;
 }
 
-.dark-gradient {
-  background: #222222;
-  background: linear-gradient(340deg, #222222 0%, black 65%);
-  background: -webkit-linear-gradient(340deg, #222222 0%, black 65%);
+.dark-gradient, body, .box {
+  background: -webkit-linear-gradient(135deg, #1a1a1a 0%, #141414 85%);
 }
 
 .light-gradient {
@@ -38,15 +36,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  background: radial-gradient(ellipse at center, #2C5364, #203A43 35%, #0F2027 100%);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .wave {
-  background: url("../images/svgs/wave.svg") repeat-x;
+  background: url(../images/svgs/wave-with-line.svg) repeat-x;
   position: absolute;
   opacity: 1;
-  top: 225px;
+  top: 150px;
   width: 2300px;
   height: 404px;
   -webkit-animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
@@ -55,20 +51,26 @@ body {
 
 .thinky {
   background: url(../images/svgs/thinky.svg);
-  width: 150px;
-  height: 150px;
-  -webkit-animation: swell 7s infinite;
-          animation: swell 7s infinite;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 150px;
+  left: 125px;
+}
+
+.isometric {
+  -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+          transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
 }
 
 .box {
   position: relative;
   width: 400px;
   height: 540px;
-  border: 10px solid rgba(251, 251, 251, 0.35);
+  border: 10px solid rgba(255, 255, 255, 0.25);
   overflow: hidden;
-  -webkit-box-shadow: 30px 25px 10px #222222;
-          box-shadow: 30px 25px 10px #222222;
+  -webkit-box-shadow: 15px 15px 15px black;
+          box-shadow: 15px 15px 15px black;
 }
 
 @-webkit-keyframes wave {
@@ -111,16 +113,16 @@ body {
   }
 }
 
-.el {
+.thinky-mask {
   width: 400px;
   height: 540px;
   -webkit-mask-image: url(../images/svgs/thinky.svg);
           mask-image: url(../images/svgs/thinky.svg);
-  -webkit-mask-size: 150px;
-          mask-size: 150px;
+  -webkit-mask-size: 125px;
+          mask-size: 125px;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
+  -webkit-mask-position: 125px 150px, center;
+          mask-position: 125px 150px, center;
 }
 /*# sourceMappingURL=wave.css.map */

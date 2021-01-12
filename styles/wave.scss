@@ -1,9 +1,9 @@
 @import './global.scss';
 
 .dark-gradient {
-  background: rgb(34,34,34);
-  background: linear-gradient(340deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 65%);
-  background: -webkit-linear-gradient(340deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 65%);
+  // background: rgb(34,34,34);
+  // background: linear-gradient(340deg, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 65%);
+  background: -webkit-linear-gradient(135deg, rgba(26, 26, 26, 1) 0%, rgb(20, 20, 20) 85%);
 }
 
 .light-gradient {
@@ -24,15 +24,14 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
-    background: radial-gradient(ellipse at center, #2C5364, #203A43 35%, #0F2027 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    @extend .dark-gradient;
 }
 
 .wave {
-  background: url('../images/svgs/wave.svg') repeat-x;
+  background: url(../images/svgs/wave-with-line.svg) repeat-x;
   position: absolute;
   opacity: 1;
-  top: 225px;
+  top: 150px;
   width: 2300px;
   height: 404px;
   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
@@ -41,29 +40,32 @@ body {
 
 .thinky {
   background: url(../images/svgs/thinky.svg);
-  width: 150px;
-  height: 150px;
-  animation: swell 7s infinite;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: 150px;
+  left: 125px;
+  // animation: swell 7s infinite;
 }
 
 .isometric {
     // width: 400px;
     // height: 3200px;
     // margin: 100px auto 0 auto;
-    // transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
 }
 
 .box {
     position: relative;
     width: 400px;
     height: 540px;
-    border: 10px solid rgba(251, 251, 251, 0.35);
+    border: 10px solid rgba(255, 255, 255, 0.25);
     // display: flex;
     // align-items: center;
     // justify-content: center;
     overflow: hidden;
-    box-shadow: 30px 25px 10px rgba(34,34,34,1);
-    // @extend .dark-gradient;
+    box-shadow: 15px 15px 15px rgb(0, 0, 0);
+    @extend .dark-gradient;
 }
 
 @keyframes wave {
@@ -84,12 +86,12 @@ body {
   }
 }
 
-.el {
+.thinky-mask {
   width: 400px;
   height: 540px;
   mask-image: url(../images/svgs/thinky.svg);
-  mask-size: 150px;
+  mask-size: 125px;
   mask-repeat: no-repeat;
-  mask-position: center;
+  mask-position: 125px 150px, center;
   // animation: swell 7s infinite;
 }

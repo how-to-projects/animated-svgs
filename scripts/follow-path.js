@@ -1,4 +1,7 @@
-
+/**
+ * https://codepen.io/francoisromain/pen/YxyEQL
+ * look at that, see how they manage string manipulations
+ */
 svgLine = () => {
     const path = document.querySelectorAll('#svgLine path');
     const lineLength = Math.floor(path[0].getTotalLength());
